@@ -1,4 +1,4 @@
-SneakerShop Website
+<h1>SneakerShop Website</h1>
 This repository hosts the ongoing development of an e-commerce website dedicated to selling sneakers. Built from scratch using HTML, CSS, and JavaScript, the project is a means of practicing and advancing web development skills.
 
 Overview
