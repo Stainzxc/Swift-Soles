@@ -2,6 +2,8 @@
           src="./images/ss-logo.png"
           alt="Swift Soles Logo"
           class="icon-logo"
+          width="50px"
+          height="50px"
         />
 This repository hosts the ongoing development of an e-commerce website dedicated to selling sneakers. 
 Built from scratch using HTML, CSS, and JavaScript, the project is a means of practicing and advancing web development skills.
