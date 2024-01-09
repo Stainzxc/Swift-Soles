@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  font-family: "Open Sans";
+  min-height: 100vh;
+}
+.header {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: 100;
+}
+.icon-logo {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+.logo {
+  display: none;
+  text-decoration: none;
+  font-size: 30px;
+  color: #232e40;
+}
+.navbar {
+  width: 30px;
+  height: 30px;
+  display: none;
+  cursor: pointer;
+}
+.close-navbar {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+nav {
+  font-size: 16px;
+  display: none;
+}
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500px;
+  position: relative;
+  color: #232e40;
+}
+nav a::before {
+  content: "";
+  background: #000000;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 0;
+  height: 2px;
+  transition: 0.3s;
+}
+nav a::before.active {
+  content: "";
+  background: #000000;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 0;
+  height: 2px;
+}
+nav a:hover::before {
+  width: 100%;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+.container#blur.active {
+  filter: blur(10px);
+  backdrop-filter: grayscale(100%) brightness(80%);
+  pointer-events: none;
+  user-select: none;
+}
+#mobile-navbar {
+  position: fixed;
+  width: 300px;
+  background-color: white;
+  color: #232e40;
+  position: fixed;
+  inset: 0 -400px 0 auto;
+  visibility: hidden;
+  display: block;
+  transition: 0.3s;
+  /* transition: 0.5s; */
+}
+#mobile-navbar.active {
+  inset: 0 0 0 auto;
+  visibility: visible;
+  z-index: 100;
+}
+.close-btn-icon {
+  display: flex;
+  justify-content: end;
+  padding: 35px 20px;
+}
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.mobile-menu a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px 0px;
+  font-family: "Poppins", sans-serif;
+}
+.mobile-menu h1 {
+  font-size: 30px;
+  padding: 20px 0px;
+}
+.mobile-menu p {
+  font-size: 17px;
+  padding: 20px 15px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
+  .icon-logo {
+    display: block;
+  }
+  .navbar {
+    display: block;
+    margin: 0px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    display: block;
+  }
+  nav {
+    display: block;
+  }
+}
