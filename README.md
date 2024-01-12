@@ -26,6 +26,7 @@ The current progress focuses on the header section, with plans to expand the web
 
 <h2>Resources</h2>
 Icon - https://icons8.com/icons
+Images- https://www.pexels.com/
 
 <h2>Usage</h2>
 As the project is still in development, there's no live demo available yet. However, you can follow the steps below to view the progress:
