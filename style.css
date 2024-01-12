@@ -186,6 +186,7 @@ nav a:hover::before {
   font-size: 76px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 15px;
 }
 .container h3 {
   font-family: "Poppins", sans-serif;
@@ -270,9 +271,23 @@ nav a:hover::before {
   .container h3 {
     font-size: 15px;
     font-weight: lighter;
+    padding: 0px 8px;
   }
   .homepage img {
     width: 100%;
+  }
+  .shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px 0px;
+  }
+  .men-content button, .female-content button {
+    position: absolute;
+    bottom: 5%; 
+    left: 15%; 
   }
   /* .product-filter {
     visibility: hidden;
