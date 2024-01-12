@@ -23,6 +23,10 @@ The current progress focuses on the header section, with plans to expand the web
 <b>HTML:</b> Markup language for structuring the website's content.
 <b>CSS:</b> Stylesheets to define the layout, design, and presentation.
 <b>JavaScript</b>: Adds interactivity and functionality for an enhanced user experience.
+
+<h2>Resources</h2>
+Icon - https://icons8.com/icons
+
 <h2>Usage</h2>
 As the project is still in development, there's no live demo available yet. However, you can follow the steps below to view the progress:
 
@@ -48,8 +52,3 @@ Ruel Almonia (www.linkedin.com/in/ruel-almonia): Project creator and primary con
 
 <h2>License</h2>
 This project is licensed under the [MIT License](link to license).
-
-<h2>Resources</h2>
-Icon - https://icons8.com/icons
-
-
