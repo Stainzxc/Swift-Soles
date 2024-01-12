@@ -49,3 +49,7 @@ Ruel Almonia (www.linkedin.com/in/ruel-almonia): Project creator and primary con
 <h2>License</h2>
 This project is licensed under the [MIT License](link to license).
 
+<h2>Resources</h2>
+Icon - https://icons8.com/icons
+
+
