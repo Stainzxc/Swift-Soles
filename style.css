@@ -284,10 +284,13 @@ nav a:hover::before {
     gap: 1rem;
     padding: 20px 0px;
   }
+  .men-content img, .female-content img{
+    width: 100%;
+  }
   .men-content button, .female-content button {
     position: absolute;
     bottom: 5%; 
-    left: 15%; 
+    left: 5%; 
   }
   /* .product-filter {
     visibility: hidden;
