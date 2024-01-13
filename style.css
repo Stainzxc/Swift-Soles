@@ -8,6 +8,21 @@
   padding: 0;
   box-sizing: border-box;
   color: #232e40;
+  /* For Webkit browsers scrollbar (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #808080; /* or any color you prefer */
+    border-radius: 10px;
+    width: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+  }
 }
 body {
   background-color: white;
@@ -109,7 +124,6 @@ nav a:hover::before {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  transition: 0.5s;
   padding-top: 120px;
 }
 .container#blur.active {
@@ -117,7 +131,8 @@ nav a:hover::before {
   backdrop-filter: grayscale(100%) brightness(80%);
   pointer-events: none;
   user-select: none;
-  z-index: 100;
+  position: relative;
+  z-index: 20;
 }
 #mobile-navbar {
   position: fixed;
@@ -126,12 +141,13 @@ nav a:hover::before {
   inset: 0 -400px 0 auto;
   visibility: hidden;
   display: block;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 #mobile-navbar.active {
   inset: 0 0 0 auto;
   visibility: visible;
-  z-index: 100;
+  position: fixed;
+  z-index: 30;
 }
 .close-btn-icon {
   display: flex;
@@ -178,7 +194,10 @@ nav a:hover::before {
 
 /* HOMEPAGE */
 .homepage {
-  text-align: center;
+  background-image: url(./images/background-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .container h1 {
   font-family: headerFont, sans-serif;
@@ -198,18 +217,28 @@ nav a:hover::before {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 20px 0px;
+  padding: 20px 0px 0px;
+  max-width: 1650px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.men-content, .female-content  {
+.men-content,
+.female-content {
   position: relative;
+  width: 100%;
+  padding: 0px 5px;
 }
-.men-content img, .female-content img{
+.men-content img,
+.female-content img {
   height: 100vh;
+  width: 100%;
 }
-.men-content button, .female-content button {
+.men-content button,
+.female-content button {
   position: absolute;
-  bottom: 5%; 
-  left: 10%; 
+  bottom: 5%;
+  left: 10%;
   transform: translate(10%);
   border-radius: 100px;
   padding: 10px 15px;
@@ -218,32 +247,26 @@ nav a:hover::before {
   border: transparent;
   cursor: pointer;
 }
-.men-content button:hover, .female-content button:hover {
+.men-content button:hover,
+.female-content button:hover {
   background-color: #607d99;
   color: white;
-} 
+}
 
-/* PRODUCT LIST FILTER STYLES*/
-/* .product-filter {
-  max-width: 300px;
-  width: 100%;
-  background-color: #FFFFFF;
-  position: fixed;
-  bottom: 0;
-  padding: 20px;
-  height: 90vh;
-  visibility: visible;
-  border-radius: 10px;
+/* SHOES COLLECTION */
+.shoes-collection {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
 }
-.product-filter h1 {
-  text-align: center;
-  padding: 10px 0px;
+.shoes-collection img {
+  width: 450px;
+  height: 450px;
 }
-.product-filter h2 {
-  text-align: center;
-  padding: 10px 0px;
-  cursor: pointer;
-} */
+h1 {
+  font-size: 2rem;
+}
+
 /* MOBILE SCREEN BREAKEPOINT */
 @media screen and (max-width: 767px) {
   .header {
@@ -266,35 +289,41 @@ nav a:hover::before {
     align-items: center;
   }
   .container h1 {
-  font-size: 30px;
+    font-size: 30px;
   }
   .container h3 {
     font-size: 15px;
     font-weight: lighter;
     padding: 0px 8px;
   }
-  .homepage img {
-    width: 100%;
+  .homepage {
+    background-size: auto;
+    height: 65vh;
   }
   .shop {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 20px 0px;
   }
-  .men-content img, .female-content img{
+  .men-content,
+  .female-content {
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .men-content img,
+  .female-content img {
+    width: 100%;
+    height: 50vh;
+  }
+  .men-content button,
+  .female-content button {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+  .shoes-collection {
+    margin: 0px 0px;
+    padding: 10px 0px;
     width: 100%;
   }
-  .men-content button, .female-content button {
-    position: absolute;
-    bottom: 5%; 
-    left: 5%; 
-  }
-  /* .product-filter {
-    visibility: hidden;
-  } */
 }
 
 /* TABLET BREAKPOINT */
@@ -310,6 +339,15 @@ nav a:hover::before {
   }
   .header {
     padding: 20px 10px;
+  }
+  .homepage {
+    background-size: auto;
+    height: 65vh;
+  }
+  .shoes-collection {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: 100%;
   }
   /* .product-filter {
     max-width: 300px;
